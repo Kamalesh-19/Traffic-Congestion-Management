@@ -136,5 +136,4 @@ See the `LICENSE` file for details.
 
 ## 👨‍💻 Author
 
-**Kamalesh**
-GitHub: https://github.com/Kamalesh-19
+Created by @kamalesh-19, @
