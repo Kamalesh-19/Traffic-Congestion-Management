@@ -76,3 +76,108 @@ The system follows a **three-tier architecture**:
 ```bash
 git clone https://github.com/Kamalesh-19/Traffic-Congestion-Management.git
 cd Traffic-Congestion-Management
+```
+
+---
+
+
+### 2️⃣ Set Up Virtual Environment
+
+```bash
+python -m venv .venv
+
+# On Windows
+.venv\Scripts\activate
+
+# On Linux / Mac
+source .venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 📊 Data Management Policy
+
+### ⚠️ Dataset Note
+
+The master traffic dataset is **not included** in this repository.
+
+It is stored locally at the **Fog Node** to:
+
+* Reduce repository size
+* Follow edge computing principles
+
+---
+
+## 📁 To Run the Project
+
+Place your traffic videos inside:
+
+```bash
+inputs/
+```
+
+---
+
+## 🎯 Lane Detection & ROI
+
+To avoid incorrect vehicle counts, the system uses **coordinate-based filtering**:
+
+```python
+# Example ROI Filtering Logic
+if car_center_x < LANE_DIVIDER_THRESHOLD and car_center_y > HORIZON_LINE:
+    count_as_congestion(vehicle)
+```
+
+### ✅ Benefits
+
+* Prevents double counting
+* Ignores irrelevant regions
+* Improves accuracy
+
+---
+
+## 📊 Output Metrics
+
+* 🚗 Vehicle Count
+* 📏 Lane-wise Density
+* 🚦 Congestion Index
+* ⏱️ Signal Timing Decisions
+
+---
+
+## 🔮 Future Enhancements
+
+* Multi-intersection coordination
+* Emergency vehicle prioritization
+* Integration with smart city infrastructure
+* AI-based traffic prediction models
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Kamalesh**
+GitHub: https://github.com/Kamalesh-19
+
+---
+
+## ⭐ Support
+
+If you find this project useful:
+
+* ⭐ Star the repository
+* 🍴 Fork it
+* 🛠️ Contribute improvements
