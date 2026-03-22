@@ -4,39 +4,6 @@ An AI-driven traffic management system designed for high-density urban environme
 
 ---
 
-## 🌟 Project Overview
-
-Traditional traffic systems rely on fixed timers or centralized cloud processing, which are inefficient for dynamic, high-volume urban traffic.
-
-This project introduces a **Fog Node-based architecture**, where:
-- Vehicle detection happens locally at intersections
-- Only processed data is sent to the cloud
-- Traffic signals adapt in real time
-
----
-
-## ✨ Key Features
-
-### 🚗 Real-Time Vehicle Detection
-- Powered by **YOLOv8 (Ultralytics)**
-- High-accuracy object detection and classification
-
-### 🌐 Fog Computing Architecture
-- Video processing handled locally at edge nodes
-- Only metadata (e.g., Congestion Index) synced to cloud
-- Reduces latency and bandwidth usage
-
-### 🚦 Adaptive Signal Logic
-- Dynamically adjusts traffic light duration
-- Example: Triggers **Priority Green** at 90% congestion
-
-### 🎯 Spatial Filtering (ROI)
-- Uses Region of Interest (ROI) masks
-- Monitors specific lanes only
-- Eliminates noise from background/opposite lanes
-
----
-
 ## 🏗️ System Architecture
 
 The system follows a **three-tier architecture**:
