@@ -138,13 +138,3 @@ See the `LICENSE` file for details.
 
 **Kamalesh**
 GitHub: https://github.com/Kamalesh-19
-
----
-
-## ⭐ Support
-
-If you find this project useful:
-
-* ⭐ Star the repository
-* 🍴 Fork it
-* 🛠️ Contribute improvements
