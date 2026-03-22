@@ -1,7 +1,17 @@
-ultralytics
-torch
-torchvision
-torchaudio
-opencv-python
-matplotlib
-pandas
+# --- Core AI & Computer Vision ---
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# --- Web Dashboard & UI ---
+streamlit>=1.25.0
+pandas>=2.0.0
+
+# --- Utilities & Math ---
+numpy>=1.24.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# --- Database (Optional/If using Firebase) ---
+firebase-admin>=6.2.0
