@@ -1,0 +1,11 @@
+.venv/
+venv/
+data/
+Master_Traffic_Dataset/
+inputs/
+runs/
+output/
+*.mp4
+*.avi
+*.pt
+*.zip

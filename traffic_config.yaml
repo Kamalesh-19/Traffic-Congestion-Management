@@ -1,0 +1,22 @@
+path: D:\finalyearproject\data\Master_Traffic_Dataset
+
+train: D:\finalyearproject\data\Master_Traffic_Dataset\images\train
+val: D:\finalyearproject\data\Master_Traffic_Dataset\images\val
+
+nc: 15
+names:
+  0: bicycle
+  1: car
+  2: motorcycle
+  3: bus
+  4: train
+  5: truck
+  6: auto-rickshaw
+  7: motor-rickshaw
+  8: cycle-rickshaw
+  9: tempo
+  10: taxi
+  11: toto
+  12: pickup
+  13: tractor
+  14: person
