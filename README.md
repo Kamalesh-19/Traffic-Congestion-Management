@@ -1,66 +1,78 @@
-🚦 Smart Traffic: Fog-Based Congestion Management System
-An AI-driven traffic management system designed for high-density urban environments. This project utilizes Edge/Fog Computing to process real-time video analytics locally, significantly reducing latency and cloud bandwidth consumption.
+# 🚦 Smart Traffic: Fog-Based Congestion Management System
 
-🌟 Project Overview
-Traditional traffic systems rely on fixed timers or centralized cloud processing, which are often inefficient for dynamic, high-volume urban traffic. This system implements a Fog Node architecture where vehicle detection and congestion logic happen at the intersection level.
+An AI-driven traffic management system designed for high-density urban environments. This project leverages **Edge/Fog Computing** to perform real-time video analytics locally, reducing latency and minimizing cloud bandwidth usage.
 
-Key Features
-Real-time Vehicle Detection: Powered by YOLOv8 for high-accuracy object tracking and classification.
+---
 
-Fog Computing Architecture: Heavy video processing is handled locally; only processed metadata (Congestion Index) is synced to the cloud.
+## 🌟 Project Overview
 
-Adaptive Signal Logic: Dynamically calculates traffic light duration based on real-time vehicle density (e.g., triggering "Priority Green" at 90% congestion).
+Traditional traffic systems rely on fixed timers or centralized cloud processing, which are inefficient for dynamic, high-volume urban traffic.
 
-Spatial Filtering (ROI): Implements Region of Interest (ROI) masks to monitor specific lanes and ignore irrelevant background or opposite-lane traffic.
+This project introduces a **Fog Node-based architecture**, where:
+- Vehicle detection happens locally at intersections
+- Only processed data is sent to the cloud
+- Traffic signals adapt in real time
 
-🏗️ System Architecture
-The project follows a tiered architecture to ensure scalability and speed:
+---
 
-Perception Layer: IP Cameras capturing high-definition traffic streams.
+## ✨ Key Features
 
-Fog Node (Edge): Local processing unit (Python/YOLOv8) performing spatial filtering and vehicle counting.
+### 🚗 Real-Time Vehicle Detection
+- Powered by **YOLOv8 (Ultralytics)**
+- High-accuracy object detection and classification
 
-Cloud Layer: Integration for logging traffic trends and system monitoring (e.g., Firebase/GitHub).
+### 🌐 Fog Computing Architecture
+- Video processing handled locally at edge nodes
+- Only metadata (e.g., Congestion Index) synced to cloud
+- Reduces latency and bandwidth usage
 
-🛠️ Tech Stack
-Language: Python 3.10+
+### 🚦 Adaptive Signal Logic
+- Dynamically adjusts traffic light duration
+- Example: Triggers **Priority Green** at 90% congestion
 
-AI Model: YOLOv8 (Ultralytics)
+### 🎯 Spatial Filtering (ROI)
+- Uses Region of Interest (ROI) masks
+- Monitors specific lanes only
+- Eliminates noise from background/opposite lanes
 
-Frontend: Streamlit (Traffic Dashboard)
+---
 
-Database: Firebase Realtime Database (Cloud Sync)
+## 🏗️ System Architecture
 
-Libraries: OpenCV, Git, NumPy, PyTorch
+The system follows a **three-tier architecture**:
 
-🚀 Installation & Setup
-1. Clone the Repository
-Bash
+### 1. Perception Layer
+- IP Cameras capture live traffic feeds
+
+### 2. Fog Node (Edge Layer)
+- Local processing using Python + YOLOv8
+- Performs:
+  - Vehicle detection
+  - ROI filtering
+  - Congestion estimation
+
+### 3. Cloud Layer
+- Stores traffic data and analytics
+- Enables remote monitoring
+- Tools: Firebase / GitHub
+
+---
+
+## 🛠️ Tech Stack
+
+| Category       | Technology |
+|---------------|-----------|
+| Language      | Python 3.10+ |
+| AI Model      | YOLOv8 (Ultralytics) |
+| Frontend      | Streamlit |
+| Database      | Firebase Realtime Database |
+| Libraries     | OpenCV, NumPy, PyTorch, Git |
+
+---
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/Kamalesh-19/Traffic-Congestion-Management.git
 cd Traffic-Congestion-Management
-2. Set Up Virtual Environment
-Bash
-python -m venv .venv
-# On Windows:
-.venv\Scripts\activate
-# On Linux/Mac:
-source .venv/bin/activate
-3. Install Dependencies
-Bash
-pip install -r requirement.txt
-📊 Data Management Policy
-Note on Dataset: To comply with Edge Computing best practices and repository storage limits, the Master Traffic Dataset is hosted locally at the Fog Node.
-
-This repository contains the Inference Logic, Source Code, and Model Configurations.
-
-To replicate results, place your traffic video files in the inputs/ directory.
-
-🎯 Lane Detection & ROI
-To ensure the system only monitors relevant traffic, we utilize a coordinate-based Region of Interest (ROI). This prevents the AI from double-counting vehicles in the opposite lane or background areas.
-
-Python
-# Example ROI Filtering Logic
-if car_center_x < LANE_DIVIDER_THRESHOLD and car_center_y > HORIZON_LINE:
-    count_as_congestion(vehicle)
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
